@@ -17,7 +17,7 @@
  }
 
 body {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.893);
 }
 
 header {
@@ -70,6 +70,7 @@ header {
 .menu li {
     display: inline-block;
     border-radius: 5px;
+    padding: 5px 20px;
 
 }
 
@@ -90,19 +91,22 @@ header {
     flex-direction: column; /* Imagem e texto um embaixo do outro no celular */
     max-width: 100%;        /* Ocupa toda a largura disponível (limite baixo) */
     padding: 10px;
+    background-color: black;
 }
 
 #imagem_grupo {
-    width: 300px;           /* Garante que a imagem não distorça */
+    width: 450px;           /* Garante que a imagem não distorça */
     height: auto;           /* Mantém a proporção original */
     object-fit: conver;     /* Garante que a imagem não distorça */
     max-width:  100%;
     flex-shrink: 0;  /* Impede que a imagem seja esmagada se faltar espaço */
+    padding-bottom: 50px
 
 }
 
 #texto {
     flex: 1;               /* Faz o texto ocupar o espaço restante disponível */
+    font-size: 20px;
 
 }
 /* Padrão: Celular (Max-width "baixo" ou fluido) */
@@ -121,3 +125,25 @@ header {
     margin: 0 auto;       /* Centraliza o container na tela */
   }
 }   
+
+#documentario {
+    margin: auto;
+    max-width: 1220px;
+    min-width: 500px;
+    width: 1000px;
+    padding: 50px;
+    display: flex;
+    height: 500px;
+    max-height: 500px ;
+}
+
+#fundo_doc {
+    background-color: rgb(47, 47, 47);
+    width: 1000px;
+    max-width: 1320px;
+    height: 500px;
+    max-height: 600px ;
+    margin: 0 auto;
+    
+
+}
