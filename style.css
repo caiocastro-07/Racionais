@@ -50,9 +50,16 @@ header {
 
 }
 
+.menu {
+    
+    color: white;
+    height: 60px;
+    width: 100%;
+}
+
 .menu ul{
     display: flex;              /*alinha os itens na horizontal */
-    justify-content: center;    /*centraliza o menu */
+    justify-content: space-around;    /*centraliza o menu */
     gap: 30px;                  /* controla a distancia dos itens */
     list-style: none;           /* remove as bolinhas da lista */
     padding: 0;
@@ -62,14 +69,11 @@ header {
 
 .menu li {
     display: inline-block;
-    
+    padding: 10px;
+    border-radius: 5px;
+
 }
 
-.menu li:not(:last-child)::after {
-    content: "|";
-    margin-left: 30px;
-    color: white;
-}
 
 .menu a {
     text-decoration: none;    /*remove o sumblinado */
@@ -78,28 +82,3 @@ header {
     text-transform: uppercase;
 
 }
-
-/* Remove as bolinhas e margens padrão */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    /* Opcional: centraliza o menu se usar flex no pai */
-    display: flex; 
-    gap: 20px; /* Espaço entre os itens */
-}
-
-/* Faz os itens ficarem lado a lado */
-nav ul li {
-    display: inline-block; /* ou use display: block no pai com flex */
-    padding: 10px 15px;
-    cursor: pointer;
-    background-color: transparent;  /* Cor inicial para testar o JS */
-}
-
-/* Estilo dos links para não herdar cores estranhas */
-nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}   
