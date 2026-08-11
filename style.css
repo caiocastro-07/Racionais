@@ -69,7 +69,6 @@ header {
 
 .menu li {
     display: inline-block;
-    padding: 10px;
     border-radius: 5px;
 
 }
@@ -82,3 +81,43 @@ header {
     text-transform: uppercase;
 
 }
+
+#conteudo {
+    display: flex;          /* Alinha os itens horizontalmente */
+    align-items: center;    /* Centraliza verticalmente (opcional) */
+    gap: 20px;              /* Espaço entre a imagem e o texto */
+    display: flex;
+    flex-direction: column; /* Imagem e texto um embaixo do outro no celular */
+    max-width: 100%;        /* Ocupa toda a largura disponível (limite baixo) */
+    padding: 10px;
+}
+
+#imagem_grupo {
+    width: 300px;           /* Garante que a imagem não distorça */
+    height: auto;           /* Mantém a proporção original */
+    object-fit: conver;     /* Garante que a imagem não distorça */
+    max-width:  100%;
+    flex-shrink: 0;  /* Impede que a imagem seja esmagada se faltar espaço */
+
+}
+
+#texto {
+    flex: 1;               /* Faz o texto ocupar o espaço restante disponível */
+
+}
+/* Padrão: Celular (Max-width "baixo" ou fluido) */
+.container-conteudo {
+  display: flex;
+  flex-direction: column; /* Imagem e texto um embaixo do outro no celular */
+  max-width: 100%;        /* Ocupa toda a largura disponível (limite baixo) */
+  padding: 10px;
+}
+
+/* Telas Maiores (Tablet e Desktop) */
+@media (min-width: 768px) {
+  #conteudo {
+    flex-direction: row;  /* Lado a lado em telas grandes */
+    max-width: 1200px;    /* Limite "alto" para não esticar demais em monitores gigantes */
+    margin: 0 auto;       /* Centraliza o container na tela */
+  }
+}   
