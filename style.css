@@ -17,7 +17,7 @@
  }
 
 body {
-    background-color: rgba(0, 0, 0, 0.893);
+    background-color: rgba(0, 0, 0, 0.95);
 }
 
 header {
@@ -28,7 +28,7 @@ header {
 }
 
 #tituloprincipal {
-    font-family: 'fonteracionais', sans-serif;
+    font-family: 'fonteracionais', cursive,  serif, sans-serif, ;
     font-size: 50px;
     color: white;
     text-align: center;
@@ -91,7 +91,6 @@ header {
     flex-direction: column; /* Imagem e texto um embaixo do outro no celular */
     max-width: 100%;        /* Ocupa toda a largura disponível (limite baixo) */
     padding: 10px;
-    background-color: black;
 }
 
 #imagem_grupo {
@@ -107,6 +106,7 @@ header {
 #texto {
     flex: 1;               /* Faz o texto ocupar o espaço restante disponível */
     font-size: 20px;
+    padding: 20px;
 
 }
 /* Padrão: Celular (Max-width "baixo" ou fluido) */
@@ -126,9 +126,6 @@ header {
   }
 }   
 
-
-
-
 footer {
     background-color: black;
     text-align: center;
@@ -138,5 +135,39 @@ footer {
     margin: 0px -170px;
     padding: 50px;
 
+}
 
+#bloco_principal {
+    background-color: rgb(0, 0, 0);
+    width: 1220px;
+    height: 1000px;
+    margin: auto;
+    
+
+}
+
+#fundo {
+    background-color: rgb(46, 46, 46);
+    width: 1000px;
+    height: 500px;
+    margin:  0 auto;
+    
+}
+
+iframe {
+    margin: auto;
+    display: flex;
+    width: 800px;
+    height: 450px;
+    padding-top: 50px;
+    
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding: 75px;
 }
