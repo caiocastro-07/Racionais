@@ -103,3 +103,64 @@ header {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+#bloco_principal {
+    background-color: black;
+    width: 100%;
+    max-width: 1220px;
+    min-height: auto;
+    margin: 0 auto;
+
+}
+#conteudo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
+
+}
+.fundo {
+    
+    background-color: rgb(46, 46, 46);
+    /* ALTERAÇÃO (item 3): largura/altura fixas (1000px / 500px) trocadas
+       por width:100% + max-width, para não estourar em celulares. */
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    max-height: 260px;
+    margin: 0 0 auto 50px;
+    padding: 20px 0;
+    border-radius: 0 50px 0 10px;
+    display: inline-block;
+}
+
+#mano_brown {
+    margin: 0 auto auto 50px ;
+    width: 100%;
+    max-width: 400px ;
+    height: 100%;
+    max-height: 700px;
+    padding: 0;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: top; /* Garante alinhamento no topo */
+
+
+}
+
+#texto_brown {
+    flex: 1;
+    font-size: clamp(16px, 2vw, 20px); /* ALTERAÇÃO: texto fluido para telas pequenas/grandes */
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top; /* Garante alinhamento no topo */
+
+}
+
+.texto, .imagem{
+    display: inline-block;
+    vertical-align: top;
+}
