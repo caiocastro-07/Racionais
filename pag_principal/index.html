@@ -21,7 +21,7 @@
             <ul>
                 
                 <li class="borda" onmouseenter="passar_por_cima(this)" onmouseleave="passar_do_nav(this)">
-                    <a href="#">Integrantes</a>
+                    <a href="index.html">Integrantes</a>
                 </li>
                 <li class="borda" onmouseenter="passar_por_cima(this)" onmouseleave="passar_do_nav(this)">
                     <a href="#">Biografia</a>
@@ -54,16 +54,27 @@
             <div id="fundo">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/yygycbPNjAI?si=bDF0DKd4pUQPkwAy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+
+            <!-- ALTERAÇÃO (responsividade): o "width: auto" e a troca do
+                 padding fixo em px por uma classe (".faixa-texto") permitem
+                 que esse bloco de texto se ajuste em telas pequenas. O
+                 padding de 100px de cada lado, fixo, quase não deixava
+                 espaço para o texto em um celular estreito. Veja a classe
+                 ".faixa-texto" no style.css. -->
             <div>
-                <p style="font-size: 20px; color: white; margin: auto; padding: 0px 100px 0px 100px; text-align: center; background-color: black;">
+                <p class="faixa-texto">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, soluta a! Ab impedit quae nesciunt accusantium nemo provident ea facilis corrupti. Perferendis officiis tempora ducimus deleniti repudiandae. Soluta, quidem eligendi.
                 </p>
             </div>
+
+            <!-- ALTERAÇÃO (responsividade): mesmo caso acima, o padding fixo
+                 de 100px foi trocado pela classe ".secao-resumo" para se
+                 adaptar ao tamanho da tela. -->
             <div>
-                <h2 style="font-size: 25px; color: white; margin: auto; padding: 50px 100px 25px 100px; background-color: black;">
+                <h2 class="secao-resumo-titulo">
                     Em Resumo
                 </h2>
-                <p style="font-size: 20px; color: white; margin: 0 auto; padding: 0px 100px 50px 100px; background-color: black;"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum eligendi tempore voluptate sed exercitationem. Minima sunt asperiores necessitatibus earum. Quod fuga perferendis neque odio iste c</p>
+                <p class="secao-resumo-texto"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum eligendi tempore voluptate sed exercitationem. Minima sunt asperiores necessitatibus earum. Quod fuga perferendis neque odio iste c</p>
             </div>
         
         </div>

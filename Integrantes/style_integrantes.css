@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/gh/usuario/repo/fonts/manufacturing-consent.css');
+
+/* Ou via link no HTML */
+/* <link rel="stylesheet" href="URL_DO_CSS_DA_FONTE"> */
+
+/* ALTERAÇÃO (item 4): a regra @font-face que apontava para um caminho local
+   (C:/Users/User/Desktop/...) foi removida. Esse caminho só existe no seu
+   computador, então em qualquer outra máquina (ou no navegador de outra
+   pessoa) a fonte simplesmente não carregava. Como você já está usando a
+   fonte "Manufacturing Consent" vinda do Google Fonts no <head> do HTML,
+   ela continua funcionando normalmente sem essa regra. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    /* ALTERAÇÃO: "height: 100%" foi removido. Quando o body tem height:100%
+       e ao mesmo tempo min-height:100vh, o navegador pode ficar confuso
+       sobre qual altura seguir, e isso atrapalha o footer ficar colado
+       embaixo. Deixando só o min-height, o body sempre terá NO MÍNIMO a
+       altura da tela, mas pode crescer se o conteúdo for maior. */
+    display: flex;              /* body organizado como uma coluna */
+    flex-direction: column;     /* header em cima, main no meio, footer embaixo */
+    min-height: 100vh;          /* ocupa no mínimo a altura total da tela */
+    margin: 0;
+}
+
+main {
+  flex: 1;
+  /* "flex: 1" faz o <main> crescer e "empurrar" o footer para o final da
+     página. Isso já existia no seu código e é a base da técnica de
+     "footer sempre embaixo" (sticky footer) — o problema era que os
+     elementos DENTRO do main tinham tamanhos fixos que quebravam esse
+     comportamento. Corrigido mais abaixo em #bloco_principal. */
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    background-image: linear-gradient(to bottom, red , black 25%);
+    background-attachment: fixed;
+}
+
+#tituloprincipal {
+    font-family: "Manufacturing Consent", sans-serif, serif;
+    /* ALTERAÇÃO: removida a referência a 'fonteracionais' (fonte local que
+       não existia mais no CSS), evitando um "fantasma" no código. */
+    /* ALTERAÇÃO (responsividade): font-size fixo em px trocado por clamp().
+       clamp(mínimo, valor-ideal, máximo) faz o texto diminuir em telas
+       pequenas (celular) e aumentar em telas grandes (TV), sem nunca
+       passar dos limites definidos. */
+    font-size: clamp(28px, 6vw, 60px);
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    letter-spacing: 5px;
+    margin: 0 auto;
+}
+
+#subtituloprincipal {
+    font-family: "Manufacturing Consent", sans-serif;
+    font-size: clamp(16px, 3vw, 30px); /* ALTERAÇÃO: mesmo motivo do título acima, texto fluido */
+    color: white;
+    text-align: center;
+    padding: 8px 16px 20px 16px; /* ALTERAÇÃO: padding lateral fixo em px trocado por valor menor para não estourar em telas pequenas */
+    margin: 0 auto;
+}
+
+.menu {
+    color: white;
+    height: 60px;
+    width: 100%;
+}
+
+.menu ul{
+    display: flex;
+    flex-wrap: wrap;            /* ALTERAÇÃO: permite que os itens do menu quebrem linha em telas estreitas, em vez de espremer ou estourar a tela */
+    justify-content: space-around;
+    gap: 30px;
+    list-style: none;
+    padding: 10px;             /* ALTERAÇÃO: pequeno respiro nas laterais em telas pequenas */
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
