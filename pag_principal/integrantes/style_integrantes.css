@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(46, 45, 45, 0.95);
     width: 100%;
     /* ALTERAÇÃO: "height: 100%" foi removido. Quando o body tem height:100%
        e ao mesmo tempo min-height:100vh, o navegador pode ficar confuso
@@ -40,6 +40,9 @@ main {
      comportamento. Corrigido mais abaixo em #bloco_principal. */
   padding-bottom: 50px;
   width: 100%;
+  padding: 0;
+  
+  
 }
 
 header {
@@ -127,6 +130,13 @@ header {
     align-items: center;
     gap: 20px;
 }
+#art_principal{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 1220px;
+    min-height: auto;
+    margin: 0 auto;
+}
 
 #mano_brown {
     padding: 25px;
@@ -163,5 +173,46 @@ header {
     flex-direction: row-reverse;
 }
 
+#art_iceblue {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
+#img_iceblue {
+    padding: 25px;
+    background-color: rgb(46, 45, 45);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 30px;
+    width: 450px;
 
+}
+#art_edirock {
+    flex-direction: row-reverse
+}
+
+#img_edirock {
+    padding: 25px;
+    background-color: rgb(46, 45, 45);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    border-radius: 30px;
+    width: 350px;
+    height: auto;
+    max-height: 450px ;
+    margin-right: 30px ;
+}
+
+#rodape {
+    padding: 30px 0;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
+    font-size: 30px;
+    background-color: black ;
+}
