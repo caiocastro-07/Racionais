@@ -40,6 +40,7 @@ main {
      comportamento. Corrigido mais abaixo em #bloco_principal. */
   padding-bottom: 50px;
   width: 100%;
+  padding: 0;
 }
 
 header {
