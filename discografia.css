@@ -106,4 +106,28 @@ header {
     font-weight: bold;
     text-transform: uppercase;
 }
+.imagem {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    max-height: 350px ;
+    margin: 0 auto 0 50px;
+}
+#art_principal{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 1220px;
+    min-height: auto;
+}
 
+#urbano {
+
+    padding: 25px;
+    background-color: rgb(46, 45, 45);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 30px;
+    width: 450px;
+    
+}
