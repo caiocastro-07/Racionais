@@ -106,28 +106,47 @@ header {
     font-weight: bold;
     text-transform: uppercase;
 }
+
 .imagem {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    max-height: 350px ;
-    margin: 0 auto 0 50px;
+    height: 100%;
+    max-height: 250px;
+    width: auto;
+    max-width: 300px;
 }
-#art_principal{
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    max-width: 1220px;
-    min-height: auto;
+
+.legenda {
+    color: white;
+    display: flex;
+    display: inline-block ;
+    text-align: center;
+
+}
+
+.container {
+    height: 300px;
+    width: 100px;
 }
 
 #urbano {
-
-    padding: 25px;
-    background-color: rgb(46, 45, 45);
+    margin: 0 100px 0 50px;
     display: flex;
     align-items: center;
+}
+
+#leg_urbano {
+    padding: 7px 0 0 30px;
+    text-align: center;
+    align-items: center;
+    display: block;
+}
+
+#inferno {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-height: 250px ;
+    width: auto;
+    max-width: 250px;
     gap: 20px;
-    border-radius: 30px;
-    width: 450px;
-    
 }
