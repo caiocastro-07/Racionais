@@ -50,6 +50,17 @@ header {
     background-image: linear-gradient(to bottom, red , black 25%);
     background-attachment: fixed;
 }
+main {
+  flex: 1;
+  /* "flex: 1" faz o <main> crescer e "empurrar" o footer para o final da
+     página. Isso já existia no seu código e é a base da técnica de
+     "footer sempre embaixo" (sticky footer) — o problema era que os
+     elementos DENTRO do main tinham tamanhos fixos que quebravam esse
+     comportamento. Corrigido mais abaixo em #bloco_principal. */
+  padding-bottom: 50px;
+  width: 100%;
+  padding: 0;
+}
 
 #tituloprincipal {
     font-family: "Manufacturing Consent", sans-serif, serif;
@@ -59,12 +70,13 @@ header {
        clamp(mínimo, valor-ideal, máximo) faz o texto diminuir em telas
        pequenas (celular) e aumentar em telas grandes (TV), sem nunca
        passar dos limites definidos. */
-    font-size: clamp(28px, 6vw, 60px);
+    font-size: clamp(34px, 9vw, 60px);
     color: white;
     text-align: center;
     padding-top: 20px;
     letter-spacing: 5px;
     margin: 0 auto;
+    
 }
 
 #subtituloprincipal {
@@ -104,4 +116,71 @@ header {
     color: white;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.texto {
+    color: white;
+    font-family: "Manufacturing Consent", sans-serif;
+
+}
+
+#conteudo {
+
+    align-items: center;
+}
+
+
+#bloco_principal {
+    background-color: rgb(0, 0, 0);
+    /* ALTERAÇÃO (itens 1 e responsividade): "width: 1220px" e
+       "height: 1000px" fixos foram removidos. Uma largura fixa em px faz a
+       página ficar com barra de rolagem horizontal em celulares (que têm
+       menos de 1220px de largura) e um espaço vazio enorme em telas
+       menores que a altura fixa. Trocado por max-width (nunca ultrapassa
+       1220px em telas grandes) e min-height:auto (a altura se ajusta ao
+       conteúdo real, sem sobrar nem faltar espaço). Isso também é o que
+       resolve o footer "flutuando": antes, a altura fixa de 1000px podia
+       ser maior que o conteúdo, empurrando tudo e criando espaço estranho
+       antes do footer. */
+    width: 100%;
+    max-width: 1220px;
+    min-height: auto;
+    margin: 0 auto;
+}
+
+
+#texto_bio {
+    font-family: "Manufacturing Consent", sans-serif;
+    font-size: clamp(16px, 2vw, 20px); /* ALTERAÇÃO: texto fluido para telas pequenas/grandes */
+    color: white;
+    text-align: justify;
+    padding: 20px;
+    font-size: 28px;
+}
+
+footer {
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding: 30px 20px;
+  /* ALTERAÇÃO (item 2): removida a "margin: 0px -170px" que existia na
+     primeira definição de footer. Uma margem lateral NEGATIVA fazia o
+     footer "vazar" para fora do body por 170px de cada lado — essa era
+     uma tentativa de correção que na verdade desalinhava o footer do
+     resto do site e atrapalhava o layout responsivo. Como o body já é
+     flex-column com main{flex:1}, o footer se posiciona sozinho no fim da
+     página sem precisar de nenhuma margem manual. */
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: clamp(18px, 3vw, 30px); /* ALTERAÇÃO: texto do footer fluido */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#rodape {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
 }
